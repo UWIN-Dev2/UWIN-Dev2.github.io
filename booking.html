@@ -69,34 +69,22 @@
   </section>
 
   <!-- MAIN CONTENT: IFRAME ONLY -->
+  <style>
+    /* Hide iframe scrollbars without breaking content */
+    #uwin-embed {
+      width: 100%;
+      height: calc(100vh - 70px); /* adjust if your navbar is taller */
+      border: none;
+      overflow: hidden !important;
+      scrollbar-width: none;          /* Firefox */
+    }
+  
+    #uwin-embed::-webkit-scrollbar {   /* Chrome / Edge */
+      display: none;
+    }
+  </style>
+  
   <section data-bs-version="5.1" class="cid-uwin-iframe-section" id="uwin-iframe-section" style="padding:0;">
-    <style>
-      /* Remove iframe scrollbars */
-      #uwin-embed {
-        width: 100%;
-        height: calc(100vh - 70px); /* navbar height compensation */
-        border: none;
-        overflow: visible !important;
-        display: block;
-      }
-  
-      /* REMOVE Mobirise section overflow */
-      #uwin-iframe-section .container-fluid {
-        padding: 0 !important;
-        overflow: visible !important;
-      }
-  
-      /* Force iframe parent to not clip */
-      #uwin-iframe-section {
-        overflow: visible !important;
-      }
-  
-      /* Prevent bootstrap from forcing overflow */
-      .container, .container-fluid {
-        overflow: visible !important;
-      }
-    </style>
-  
     <div class="container-fluid p-0">
       <iframe
         id="uwin-embed"
