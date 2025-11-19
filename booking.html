@@ -69,12 +69,38 @@
   </section>
 
   <!-- MAIN CONTENT: IFRAME ONLY -->
-  <section data-bs-version="5.1" class="cid-uwin-iframe-section" id="uwin-iframe-section" style="padding: 0;">
+  <section data-bs-version="5.1" class="cid-uwin-iframe-section" id="uwin-iframe-section" style="padding:0;">
+    <style>
+      /* Remove iframe scrollbars */
+      #uwin-embed {
+        width: 100%;
+        height: calc(100vh - 70px); /* navbar height compensation */
+        border: none;
+        overflow: visible !important;
+        display: block;
+      }
+  
+      /* REMOVE Mobirise section overflow */
+      #uwin-iframe-section .container-fluid {
+        padding: 0 !important;
+        overflow: visible !important;
+      }
+  
+      /* Force iframe parent to not clip */
+      #uwin-iframe-section {
+        overflow: visible !important;
+      }
+  
+      /* Prevent bootstrap from forcing overflow */
+      .container, .container-fluid {
+        overflow: visible !important;
+      }
+    </style>
+  
     <div class="container-fluid p-0">
       <iframe
+        id="uwin-embed"
         src="https://uwin.cypherx.pro/"
-        title="UWIN Employee Portal App"
-        style="border: 0; width: 100%; height: 100vh;"
       ></iframe>
     </div>
   </section>
